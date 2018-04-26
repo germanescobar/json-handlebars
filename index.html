@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON and Handlebars example</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Airline</th>
+        <th>Status</th>
+        <th colspan="2">Departure</th>
+        <th colspan="2">Arrival</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script id="flight-template" type="text/x-handlebars-template">
+    <tr class="{{className}}">
+      <td>{{airline}}</td>
+      <td>{{status}}</td>
+      <td>{{departureIata}}</td>
+      <td>{{departureTime}}</td>
+      <td>{{arrivalIata}}</td>
+      <td>{{arrivalTime}}</td>
+    </tr>
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.com/libraries/handlebars.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
