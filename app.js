@@ -13,19 +13,11 @@ for (var i=0; i < flights.length; i++) {
     className = "table-success";
   }
 
-  var context = {
-    airline: flight.airline,
-    status: flight.status,
-    departureIata: flight.departure.iata,
-    departureTime: flight.departure.time,
-    arrivalIata: arrivalIata,
-    arrivalTime: arrivalTime,
-    className: className
-  }
+  flight.className = className
 
   var html = $("#flight-template").html();
   var template = Handlebars.compile(html);
-  var tr = template(context);
+  var tr = template(flight);
 
   $("tbody").append(tr);
 }
