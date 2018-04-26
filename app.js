@@ -3,9 +3,6 @@ var flights = JSON.parse('[{"airline":"Oceanic","status":"crashed","departure":{
 for (var i=0; i < flights.length; i++) {
   var flight = flights[i];
 
-  var arrivalIata = flight.arrival ? flight.arrival.iata : "";
-  var arrivalTime = flight.arrival ? flight.arrival.time : "";
-
   var className = "";
   if (flight.status == "crashed") {
     className = "table-danger";
